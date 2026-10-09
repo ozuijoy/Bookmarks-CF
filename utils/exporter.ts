@@ -43,7 +43,7 @@ export const downloadBookmarks = (bookmarks: Bookmark[]) => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `nebula-bookmarks-${new Date().toISOString().slice(0, 10)}.html`;
+  a.download = `bookmarks-cf-${new Date().toISOString().slice(0, 10)}.html`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -56,7 +56,7 @@ export const downloadBackupJSON = (data: KVData) => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `nebula-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `bookmarks-cf-backup-${new Date().toISOString().slice(0, 10)}.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

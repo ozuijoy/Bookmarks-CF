@@ -30,7 +30,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
 
   // 獲取環境變量中的標題
-  const defaultTitle = env.SITE_TITLE || '星雲導航';
+  const defaultTitle = env.SITE_TITLE || 'Bookmarks-CF';
 
   // 定義默認數據結構，與前端保持一致
   const DEFAULT_DATA = {

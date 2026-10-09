@@ -1,4 +1,4 @@
-# 星雲導航 · Bookmarks-CF
+# Bookmarks-CF
 
 基於 Cloudflare Pages + KV 構建的未來風導航頁，支持 React 前端、服務端 Functions API、密碼認證、拖拽排序、天氣Widget 等特性。
 
@@ -66,7 +66,7 @@ npm install
 | 變量名 | 必填 | 類型 | 說明 |
 |--------|------|------|------|
 | `AUTH_PASSWORD` | ✅ | Secret | 站點訪問密碼 |
-| `SITE_TITLE` | ❌ | Variable | 站點標題，默認 `星雲導航` |
+| `SITE_TITLE` | ❌ | Variable | 站點標題，默認 `Bookmarks-CF` |
 | `REDIRECTS` | ❌ | Variable | URL 重定向規則（JSON 字符串） |
 
 > ⚠️ **安全提示**：所有敏感值請在 Cloudflare Dashboard 中設定，切勿寫入代碼或提交到 Git 倉庫。
@@ -114,7 +114,7 @@ wrangler pages deploy dist --project-name bookmarks-cf
 
 | 變量名 | 類型 | 示例 |
 |--------|------|------|
-| `SITE_TITLE` | Variable | `星雲導航` |
+| `SITE_TITLE` | Variable | `Bookmarks-CF` |
 | `REDIRECTS` | Variable | `{"emby":"https://emby.example.com"}` |
 
 ## 🔐 安全說明

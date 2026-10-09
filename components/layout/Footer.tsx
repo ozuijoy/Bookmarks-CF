@@ -74,7 +74,7 @@ export const Footer: React.FC<Props> = ({ count, sizeStr, percent }) => {
       <div className="flex items-center gap-6 mt-2">
           {/* GitHub Link */}
           <a 
-            href="https://github.com/dghjlcx/Nebula-Nav" 
+            href="https://github.com/ozuijoy/Bookmarks-CF" 
             target="_blank" 
             rel="noreferrer" 
             className="flex items-center gap-2 opacity-50 hover:opacity-100 hover:text-white transition-all duration-300 text-xs font-medium"

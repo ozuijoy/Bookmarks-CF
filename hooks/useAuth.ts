@@ -7,7 +7,7 @@ export const useAuth = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const session = sessionStorage.getItem('nebula_session');
+    const session = sessionStorage.getItem('bookmarks_cf_session');
     if (session) {
       setPassword(session);
       setIsAuthenticated(true);
@@ -19,7 +19,7 @@ export const useAuth = () => {
     setLoading(true);
     const isValid = await StorageService.verifyPassword(pwd);
     if (isValid) {
-      sessionStorage.setItem('nebula_session', pwd);
+      sessionStorage.setItem('bookmarks_cf_session', pwd);
       setPassword(pwd);
       setIsAuthenticated(true);
       setLoading(false); // 關鍵修復：登錄成功後必須關閉 loading 狀態
@@ -30,7 +30,7 @@ export const useAuth = () => {
   };
 
   const logout = () => {
-    sessionStorage.removeItem('nebula_session');
+    sessionStorage.removeItem('bookmarks_cf_session');
     // 刷新頁面以清除狀態
     window.location.reload();
   };

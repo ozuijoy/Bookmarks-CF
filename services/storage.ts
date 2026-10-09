@@ -2,10 +2,10 @@ import { Bookmark, KVData } from '../types';
 
 // 從環境變量讀取配置，不硬編碼任何敏感值
 const USE_CLOUD_API = (import.meta as any).env?.VITE_USE_CLOUD_API !== 'false';
-const STORAGE_KEY = (import.meta as any).env?.VITE_STORAGE_KEY || 'nebula_nav_data';
+const STORAGE_KEY = (import.meta as any).env?.VITE_STORAGE_KEY || 'bookmarks_cf_data';
 
-// 獲取環境變量中的標題，默認為 '星雲導航'
-export const DEFAULT_SITE_TITLE = (import.meta as any).env?.VITE_SITE_TITLE || '星雲導航';
+// 獲取環境變量中的標題，默認為 'Bookmarks-CF'
+export const DEFAULT_SITE_TITLE = (import.meta as any).env?.VITE_SITE_TITLE || 'Bookmarks-CF';
 
 // Initial Data for Demo (Fallback)
 const DEFAULT_DATA: KVData = {

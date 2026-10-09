@@ -36,7 +36,7 @@ export const ImportModal: React.FC<Props> = ({ isOpen, onClose, onImport }) => {
         <p className="text-sm text-gray-400 mb-6">
           支持導入: <br/>
           1. 瀏覽器導出的 HTML 書籤文件。<br/>
-          2. Nebula Nav 導出的 JSON 備份文件。
+          2. Bookmarks-CF 導出的 JSON 備份文件。
         </p>
         
         <input 
