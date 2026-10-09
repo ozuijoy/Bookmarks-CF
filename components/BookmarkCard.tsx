@@ -139,14 +139,14 @@ export const BookmarkCard: React.FC<Props> = ({
           <button 
             onClick={(e) => { e.preventDefault(); e.stopPropagation(); onEdit(bookmark); }}
             className="p-1.5 bg-blue-500 rounded-full shadow-lg hover:bg-blue-400 text-xs text-white"
-            onPointerDown={(e) => e.stopPropagation()} // 防止拖拽干擾點擊按鈕
+            onPointerDown={(e) => e.stopPropagation()} // 防止拖拽幹擾點擊按鈕
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
           </button>
           <button 
             onClick={(e) => { e.preventDefault(); e.stopPropagation(); onDelete(bookmark.id); }}
             className="p-1.5 bg-red-500 rounded-full shadow-lg hover:bg-red-400 text-xs text-white"
-            onPointerDown={(e) => e.stopPropagation()} // 防止拖拽干擾點擊按鈕
+            onPointerDown={(e) => e.stopPropagation()} // 防止拖拽幹擾點擊按鈕
           >
              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
