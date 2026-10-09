@@ -1,11 +1,10 @@
 import { Bookmark, KVData } from '../types';
 
-// Set to true for Cloudflare Pages deployment
-const USE_CLOUD_API = true; 
-const STORAGE_KEY = 'nebula_nav_data';
+// 從環境變量讀取配置，不硬編碼任何敏感值
+const USE_CLOUD_API = (import.meta as any).env?.VITE_USE_CLOUD_API !== 'false';
+const STORAGE_KEY = (import.meta as any).env?.VITE_STORAGE_KEY || 'nebula_nav_data';
 
 // 獲取環境變量中的標題，默認為 '星雲導航'
-// Safely access import.meta.env
 export const DEFAULT_SITE_TITLE = (import.meta as any).env?.VITE_SITE_TITLE || '星雲導航';
 
 // Initial Data for Demo (Fallback)
@@ -41,7 +40,9 @@ export const StorageService = {
         return false;
       }
     } else {
-      return password === 'admin';
+      // 本地開發模式：僅提示，不允許任何密碼通過
+      console.warn('[StorageService] Cloud API 未啟用，本地開發模式不支援認證');
+      return false;
     }
   },
 
