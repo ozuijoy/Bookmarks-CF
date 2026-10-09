@@ -1,0 +1,5 @@
+{
+  "name": "Bookmarks-CF",
+  "description": "基於 Cloudflare Pages 和 KV 構建的未來風導航頁。支持 Vite 構建、React 前端以及服務端 Functions 處理 API 和重定向邏輯。",
+  "requestFramePermissions": []
+}
